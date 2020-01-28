@@ -9,11 +9,11 @@
     <title>VueJs</title>
 </head>
 <body>
-    <div class="container pt-5">
+    <div class="container pt-5" id="app">
         <div class="row mb-3">
             <h1 class="col">Bikes application</h1>
         </div>
-    </div>
+    
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
@@ -22,16 +22,19 @@
             </div>
             <hr>
             <ul class="list-group">
-               <li class="list-group-item list-group-item-action pointer">f</li>
-               <li class="list-group-item list-group-item-action pointer">f</li>
-               <li class="list-group-item list-group-item-action pointer">f</li>
+               <li 
+               v-for="bike of bikes"
+               class="list-group-item list-group-item-action pointer">
+               {{ bike.name }}
+            </li>
+ 
             </ul>
         </div>
         <div class="col-md-8">
             <div class="row">
                 <div class="col-md-5">
                     <h2>Specialized</h2>
-                    <img src="images/stumpi evo.jpg" alt="" class="rounded detailed-bike-image">
+                    <img src="images/stumpiEvo.jpg" alt="" class="rounded detailed-bike-image">
 
                 </div>
                 <div class="col-md-7 pt-2">
@@ -49,5 +52,8 @@
             </div>
         </div>
     </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
