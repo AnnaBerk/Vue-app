@@ -18,17 +18,17 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="search">Find a bike</label>
-                <input type="text" class="form-control" id="search" placeholder="Name, model...">
+                <input type="text" class="form-control" id="search" placeholder="Name, model..." v-model="search">
             </div>
             <hr>
             <ul class="list-group">
                <li 
                v-on:click="selectBike(index)"
-               v-for="(bike, index) of bikes"
+               v-for="(bike, index) of filterderBikes"
                class="list-group-item list-group-item-action pointer"
                v-bind:class="{'active':selectedBikeIndex === index}">
                
-               {{ bike.name }}
+               {{ bike.name }} {{ bike.model }}
             </li>
  
             </ul>

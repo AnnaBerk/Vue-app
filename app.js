@@ -12,6 +12,7 @@ new Vue ({
         bike:bikes[0],
         selectedBikeIndex:0,
         phoneVisibility:false,
+        search:''
     },
     methods:{
         selectBike: function(index){
@@ -22,7 +23,11 @@ new Vue ({
     computed:{
         phoneBtnChangeText(){
             return this.phoneVisibility ? "Hide phone" : "Show phone"
+        },
+        filterderBikes(){
+            return this.bikes.filter(bike=>{
+                return bike.name.indexOf(this.search)> -1 || bike.model.indexOf(this.search)>-1
+            })
         }
-
     }
 })
