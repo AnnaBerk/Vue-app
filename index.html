@@ -47,10 +47,15 @@
                         <li>Year- <strong>{{bike.year}}</strong></li>
                         <li>Owner- <strong>{{bike.owner}}</strong></li>
                     </ul>
+                    <div class="phone-block">
                     <p v-if="phoneVisibility">{{bike.phone}}</p>
-                    <button class="btn btn-outline-success" v-on:click = "phoneVisibility =true">Show phone</button>
+                </div>
+                    <button class="btn btn-outline-success" 
+                    v-on:click = "phoneVisibility =!phoneVisibility"
+                    >{{phoneBtnChangeText}}</button>
+                
                     <button class="btn btn-primary">Buy</button>
-
+               
                 </div>
             </div>
         </div>

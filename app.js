@@ -18,5 +18,11 @@ new Vue ({
             this.bike = bikes[index]
             this.selectedBikeIndex =index
         }
+    },
+    computed:{
+        phoneBtnChangeText(){
+            return this.phoneVisibility ? "Hide phone" : "Show phone"
+        }
+
     }
 })
