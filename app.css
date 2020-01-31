@@ -10,3 +10,12 @@
 .modal{
     display: block;
 }
+
+
+.phone-enter-active, .phone-leave-active{
+    transition: all .5s;
+}
+.phone-enter, .phone-leave-to{
+    transform: translateX(50px);
+    opacity: 0;
+}

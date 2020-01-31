@@ -48,7 +48,9 @@
                         <li>Owner- <strong>{{bike.owner}}</strong></li>
                     </ul>
                     <div class="phone-block">
+                        <transition name="phone">    
                     <p v-if="phoneVisibility">{{bike.phone}}</p>
+                        </transition> 
                 </div>
                     <button class="btn btn-outline-success" 
                     v-on:click = "phoneVisibility =!phoneVisibility"
