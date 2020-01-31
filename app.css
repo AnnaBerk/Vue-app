@@ -27,3 +27,22 @@
     transform: translateY(-100px);
     opacity: 0;
 }
+
+.fade-enter, .fade-leave-to{
+    opacity: 0;
+}
+.fade-leave-active{
+    animation: .75s fade reverse;
+}
+.fade-enter-active{
+    animation: .75s fade forwards;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: .5s;
+    )
+}

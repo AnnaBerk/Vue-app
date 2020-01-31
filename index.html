@@ -76,8 +76,8 @@
     </div>
 
 <transition name="modal"> 
-<div class="modal ade show" v-if="modalVisibility" tabindex="-1" role="dialog">
-</transition>
+<div class="modal fade show" v-if="modalVisibility" tabindex="-1" role="dialog">
+
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -101,7 +101,10 @@
           </div>
         </div>
       </div>
-      <div class="madal-backdrop fade show" v-if="modalVisibility"></div>
+    </transition>
+      <transition name="fade"> 
+      <div class="modal-backdrop fade show" v-if="modalVisibility"></div>
+    </transition>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
