@@ -19,3 +19,11 @@
     transform: translateX(50px);
     opacity: 0;
 }
+
+.modal-enter-active, .modal-leave-active{
+    transition: all .5s;
+}
+.modal-enter, .modal-leave-to{
+    transform: translateY(-100px);
+    opacity: 0;
+}
