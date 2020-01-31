@@ -2,8 +2,8 @@ const bike = (name, model,owner,year,phone,image)=>({name, model, owner, year, p
 const log = (text, type, date = new Date()) =>({text, type, date})
 
 const bikes = [
-    bike('Cannondale', 'Habit', 'Gabi', 2018, '+7 925 787 27 55','images/cannondaleBad.jpg'),
-    bike('Specialized', 'Stumpjumper', 'Igor', 2019, '+7 925 787 299 55','images/StumpiEvo.jpg')
+    bike('Cannondale', 'Habit', 'Gabi', 2018, '+7 925 787 27 55','images/CannondaleBad.jpg'),
+    bike('Specialized', 'Stumpjumper', 'Igor', 2019, '+7 925 787 299 55','images/stumpiEvo.jpg')
 ]
 
 new Vue ({
